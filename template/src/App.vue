@@ -23,7 +23,7 @@ export default {
     if(location.href.indexOf("localhost")>=0){
       env = "dev";
     }else{
-      if(env==undefined){
+      if(env==null||env==undefined){
         env = "for";
       }
     }
