@@ -82,6 +82,22 @@ module.exports = {
       type: 'confirm',
       message:'Install vuex?'
     },
+    channel:{
+      type: 'list',
+      message:'是什么项目?',
+      choices:[
+        {
+          name:'期货',
+          value:'qh',
+          short:'qh'
+        },
+        {
+          name:'金大师',
+          value:'jds',
+          short:'jds'
+        },
+      ]
+    },
     // lint: {
     //   when: 'isNotTest',
     //   type: 'confirm',

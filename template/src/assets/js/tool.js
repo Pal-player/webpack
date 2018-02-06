@@ -36,6 +36,24 @@ const Tool = {
     var date = new Date();
     date.setTime(date.getTime() - 10000);
     document.cookie = name + "=a; expires=" + date.toGMTString() + "; path=/;domain=" + domain;
+  },
+  request(name){
+    var url = location.href;
+    var index=url.indexOf("?");
+    if(index>-1){
+      var values=url.substring(index+1,url.length).split("&");
+      if(values.length>0){
+        for(var i=0;i<values.length;i++){
+          if(values[i].indexOf("=")>0){
+            var tmp = values[i].split("=");
+            if(tmp[0]==name){
+              return tmp[1];
+            }
+          }
+        }
+      }
+    }
+    return null;
   }
 }
 
