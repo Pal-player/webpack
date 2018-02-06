@@ -6,6 +6,8 @@ const states = {
     cms:"",
     zbs:"",
     hdapi:"",
+    isApp:false,
+    channel:"",
     login:"",
   }
 }
