@@ -53,8 +53,8 @@ const mutations = {
     }
   },
   set_base(state, obj){
-    state.base[obj.key] = obj.val
-  },
+    state.base[obj.key] = obj.val;
+  }
 }
 
 export default mutations
